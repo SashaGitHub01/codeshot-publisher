@@ -9,4 +9,11 @@
 4. Добавьте Codeshot в список приложений с разрешенной записью экрана и звука в 2 местах.
 5. Полностью отключите и перезапустите приложение;
 
-Если не сработало - переустановите приложение и пройдите путь сначала.
+Если не сработало - переустановите приложение и сделайте сброс в командной строке:
+# Сброс разрешений для экрана
+tccutil reset ScreenCapture com.sashagithub.codeshot
+
+# Сброс разрешений для микрофона
+tccutil reset Microphone com.sashagithub.codeshot
+
+sudo xattr -rd com.apple.quarantine "/Applications/Codeshot.app"
